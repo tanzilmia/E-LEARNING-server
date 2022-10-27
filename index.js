@@ -10,13 +10,13 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/course',(req,res)=>{
+app.get('/course',(req,res)=>{ 
   res.send(coureses)
 })
 
 app.get('/details/:id', (req,res)=>{
   const id = req.params.id
-  const details = coureses.find(course => course.course_id == id)
+  const details = coureses.find(course => course.course_name == id)
   res.send(details)
 })
 
